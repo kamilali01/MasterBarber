@@ -1,0 +1,167 @@
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  min-height: 100vh;
+  padding: 20px;
+  margin: 0;
+}
+.container {
+  background: rgba(30, 30, 30, 0.98);
+  padding: 32px 32px 24px 32px;
+  border-radius: 18px;
+  max-width: 420px;
+  margin: 40px auto;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1.5px solid #bfa14a;
+}
+h1 {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-size: 2.2rem;
+  color: #bfa14a;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 8px #0008;
+}
+label {
+  color: #bfa14a;
+  font-weight: 500;
+  margin-top: 10px;
+  display: block;
+}
+input[type="date"], input[type="text"] {
+  width: 92%;
+  max-width: 340px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1.5px solid #bfa14a;
+  background: #232526;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+input[type="date"]:focus, input[type="text"]:focus {
+  border: 1.5px solid #fff2b2;
+}
+#slots {
+  margin-top: 18px;
+}
+.slot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 1.08rem;
+  background: #2d2d2d;
+  border: 1.5px solid #bfa14a;
+  color: #fff;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.slot.free:hover {
+  background: #bfa14a;
+  color: #232526;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px #bfa14a44;
+}
+.slot.booked {
+  background: #444;
+  color: #bfa14a;
+  border: 1.5px solid #555;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.slot[style*="pointer-events: none"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+#message {
+  margin-top: 18px;
+  text-align: center;
+  color: #fff;
+  background: #bfa14a;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px #bfa14a33;
+  letter-spacing: 1px;
+  display: none;
+}
+#message:not(:empty) {
+  display: block;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #232526;
+  border-radius: 14px;
+  padding: 32px 28px 24px 28px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 2px solid #bfa14a;
+  min-width: 280px;
+  max-width: 90vw;
+  text-align: center;
+}
+.modal-content h2 {
+  color: #bfa14a;
+  margin-bottom: 18px;
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
+}
+#modalNameInput {
+  width: 90%;
+  max-width: 260px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1.5px solid #bfa14a;
+  background: #2d2d2d;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  outline: none;
+  transition: border 0.2s;
+}
+#modalNameInput:focus {
+  border: 1.5px solid #fff2b2;
+}
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+#modalConfirm, #modalCancel {
+  background: #bfa14a;
+  color: #232526;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#modalConfirm:hover {
+  background: #fff2b2;
+}
+#modalCancel:hover {
+  background: #444;
+  color: #bfa14a;
+}
+  
